@@ -6,11 +6,11 @@ interface RoutesLayoutProps {
 
 function RoutesLayout({ children }: RoutesLayoutProps) {
   return (
-    <>
+    <div>
       Header
       {children}
       Footer
-    </>
+    </div>
   );
 }
 
