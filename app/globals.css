@@ -11,3 +11,15 @@ body {
     --radius: 0.5rem;
   }
 }
+
+.bg-one {
+  @apply bg-white dark:bg-mycolor-100 !important;
+}
+
+.bgHeader {
+  @apply font-semibold bg-mycolor-500 hover:bg-mycolor-500  dark:text-white  dark:bg-mycolor-101 dark:hover:bg-mycolor-101 !important;
+}
+
+.activeHeader {
+  @apply underline underline-offset-2 font-semibold bg-mycolor-500/75 hover:bg-mycolor-500  dark:text-white  dark:bg-mycolor-101/70 dark:hover:bg-mycolor-101 !important;
+}
