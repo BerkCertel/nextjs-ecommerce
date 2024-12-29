@@ -16,10 +16,24 @@ body {
   @apply bg-white dark:bg-mycolor-100 !important;
 }
 
+.bg-two {
+  @apply bg-mycolor-100 text-mycolor-500 dark:bg-mycolor-500 dark:text-mycolor-100
+  hover:opacity-75 transition duration-500
+  !important;
+}
+
 .bgHeader {
   @apply font-semibold bg-mycolor-500 hover:bg-mycolor-500  dark:text-white  dark:bg-mycolor-101 dark:hover:bg-mycolor-101 !important;
 }
 
 .activeHeader {
   @apply underline underline-offset-2 font-semibold bg-mycolor-500/75 hover:bg-mycolor-500  dark:text-white  dark:bg-mycolor-101/70 dark:hover:bg-mycolor-101 !important;
+}
+
+.validatLabel {
+  @apply text-mycolor-100 dark:text-mycolor-500 !important;
+}
+
+.validatError {
+  @apply text-red-600 dark:text-red-500 !important;
 }

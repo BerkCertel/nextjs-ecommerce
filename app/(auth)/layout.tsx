@@ -7,7 +7,7 @@ interface AuthLayoutProps {
 
 function AuthLayout({ children }: AuthLayoutProps) {
   return (
-    <div className="flex flex-row items-center justify-center">
+    <div className="flex flex-row items-center justify-center gap-x-14">
       <div className="lg:w-2/5 lg:block hidden h-screen">
         <Image
           width={1080}
