@@ -33,6 +33,7 @@ function Hero() {
               alt={`slider-${slider.id}`}
               width={1920}
               height={1080}
+              priority
               className="w-full h-96 object-cover md:h-[450px] lg:h-[520px]"
             />
           </CarouselItem>

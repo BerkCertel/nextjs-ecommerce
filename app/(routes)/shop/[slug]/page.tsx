@@ -1,19 +1,20 @@
 import { categories } from "@/constans";
 import React from "react";
 
-interface ShopDetailPageProps {
-  params: {
-    slug: string;
-  };
-}
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const slug = (await params).slug;
 
-export async function generateMetadata({ params }: ShopDetailPageProps) {
-  const project = categories.find((product) =>
-    product.href.includes(params.slug)
-  );
+  const project = categories.find((product) => product.href.includes(slug));
 
   if (!project) {
-    return <div>project not found</div>;
+    return {
+      title: "Project Not Found",
+      description: "The project you are looking for does not exist.",
+    };
   }
 
   return {
