@@ -14,9 +14,9 @@ function AuthLayout({ children }: AuthLayoutProps) {
         <Image
           width={1080}
           height={1920}
-          src={`/login/login.jpg`}
+          src={`/images/login/login.jpg`}
           alt="logo"
-          loading="lazy"
+          priority
           className="w-full h-screen object-cover brightness-75 object-center"
         />
       </div>

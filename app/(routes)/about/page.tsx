@@ -1,3 +1,4 @@
+// app/(routes)/about/page.tsx
 "use client";
 
 import { columns, Payment } from "@/components/DataTable/columns";
@@ -15,6 +16,19 @@ function AboutPage() {
 
     fetchData();
   }, []);
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    author: "berkcertel",
+    isPublished: true,
+    tags: [
+      "web development",
+      "nextjs",
+      "mobile development",
+      "shopify development",
+    ],
+  };
 
   async function getData(): Promise<Payment[]> {
     return [
@@ -54,9 +68,15 @@ function AboutPage() {
   }
 
   return (
-    <div className="container mx-auto p-10 border dark:border-slate-600 mt-5 mb-5  rounded-md shadow">
-      <DataTable columns={columns} data={data} />
-    </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="container mx-auto p-10 border dark:border-slate-600 mt-5 mb-5 rounded-md shadow">
+        <DataTable columns={columns} data={data} />
+      </div>
+    </>
   );
 }
 
