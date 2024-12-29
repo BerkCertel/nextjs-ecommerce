@@ -31,9 +31,9 @@ body {
 }
 
 .validatLabel {
-  @apply text-mycolor-100 dark:text-mycolor-500 !important;
+  @apply font-bold text-mycolor-100 dark:text-mycolor-500 !important;
 }
 
 .validatError {
-  @apply text-red-600 dark:text-red-500 !important;
+  @apply text-xs text-red-600 dark:text-red-500 !important;
 }

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 
@@ -14,10 +16,11 @@ function AuthLayout({ children }: AuthLayoutProps) {
           height={1920}
           src={`/login/login.jpg`}
           alt="logo"
+          loading="lazy"
           className="w-full h-screen object-cover brightness-75 object-center"
         />
       </div>
-      <div className="w-3/5">{children}</div>
+      <div className="w-full  md:w-3/5 md:mt-10 mt-16">{children}</div>
     </div>
   );
 }
